@@ -1,5 +1,5 @@
 # CDUT 罗澎
-# 开发时间：2021/11/27 16:49
+# 开发时间：2021/11/27 18:44
 
 class Animal():
     def eat(self):
@@ -38,22 +38,23 @@ class XiaoTianQuan(Dog):
     def fly(self):
         print("我会飞")
 
+    # 方法覆盖
+    # def bark(self):
+    #     print("叫得跟神一样...")
 
-class Cat(Animal):
-
-    def catch(self):
-        print("抓老鼠")
+    # 方法扩展
+    def bark(self):
 
 
-"""wangcai = Dog()
-wangcai.eat()
-wangcai.drink()
-wangcai.run()
-wangcai.sleep()
-wangcai.bark()"""
+        # 1.针对子类特有的需求编写代码
+        print("神一样的叫唤...")
 
-# 创建一个啸天犬类
+        # 2.使用super(). 调用父类的方法
+        super().bark()
+
+        # 3.增加其他子类的代码
+        print("$#%##$$")
+
 xtq = XiaoTianQuan()
-xtq.fly()
+# 如果子类重写了父类的方法，会调用子类中重写的方法
 xtq.bark()
-xtq.eat()
